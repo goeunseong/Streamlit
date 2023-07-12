@@ -4,3 +4,5 @@ pandas
 seaborn
 matplotlib
 scipy
+time
+sklearn

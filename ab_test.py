@@ -133,9 +133,9 @@ def test(a,b, text):
     st.write(one_s_test)
 
 with st.sidebar:
-    choose = option_menu("AB_TEST", ["About", "A/B Test", "Update log"],
+    choose = option_menu("AB 테스트", ["About", "A/B 테스트", "Update log"],
                          icons=['house', 'cpu fill', 'kanban'],
-                         menu_icon="app-indicator", default_index=1,
+                         menu_icon="app-indicator", default_index=0,
                          styles={
         "container": {"padding": "5!important", "background-color": "#fafafa"},
         "icon": {"color": "orange", "font-size": "25px"}, 
@@ -144,9 +144,9 @@ with st.sidebar:
     }
     )
 
-if choose == 'A/B Test':
+if choose == 'A/B 테스트':
     # 앱 메인 타이틀
-    st.title('A/B Test for creative optimization')
+    st.title('A/B 테스트 for creative optimization')
     # 파일 업로드 버튼(업로드 기능)
     file = st.file_uploader('파일 선택(csv or excel)', type=['csv', 'xls', 'xlsx'])
     if file is not None:
@@ -156,7 +156,7 @@ if choose == 'A/B Test':
         if prep:
             df = prep_data()
             st.dataframe(df)
-        option = st.selectbox("A/B Test 이전 수행할 항목을 선택해주세요!", ('선택', '샘플 크기 추정','데이터 리샘플링'))
+        option = st.selectbox("A/B 테스트 이전 수행할 항목을 선택해주세요!", ('선택', '샘플 크기 추정','데이터 리샘플링'))
         if option == '샘플 크기 추정':
             calc_sample_size()
         elif option == '데이터 리샘플링':
@@ -174,11 +174,17 @@ if choose == 'A/B Test':
                     prog.progress(pr+1, text = 'wait for it...')
                 test(click_0, click_1, '모델')
 
-        
 elif choose == 'About':
-    st.markdown("""안녕하세요, :blue[A/B Test 사이트]입니다:sunglasses:. 왼쪽 메뉴탭의 **A/B Test**에서  
-                상단의 Browse files를 클릭하여 A/B Test를 진행하고자 하는 파일을 업로드 해주세요!  
-                이후 생성되는 가이드에 따라 A/B Test를 진행하시면 됩니다:)""")
+    st.image('배경.png', use_column_width = True)
+    st.markdown("""안녕하세요, :blue[A/B 테스트 사이트]입니다:sunglasses:. 왼쪽 메뉴탭의 **A/B 테스트**에서  
+                상단의 Browse files를 클릭하여 A/B 테스트를 진행하고자 하는 파일을 업로드 해주세요!  
+                이후 생성되는 가이드에 따라 A/B 테스트를 진행하시면 됩니다:)  
+                """)
+    with st.expander('A/B 테스트의 필요성'):
+        st.write('A/B 테스트는 ...')
+    with st.expander('A/B 테스트를 위한 통계적 검정의 종류'):
+        st.write('통계적 검정에는...')
+
 elif choose == 'Update log':
     st.write('<p style="font-size:15px; color:green;">1차 업데이트 완료_샘플 크기 추정(on 2023.07.09)</p>', unsafe_allow_html=True)
     st.write('<p style="font-size:15px; color:green;">2차 업데이트 완료_데이터 리샘플링(on 2023.07.09)</p>', unsafe_allow_html=True)

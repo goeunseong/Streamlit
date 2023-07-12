@@ -132,7 +132,7 @@ def test(a,b, text):
     st.write('<p style="font-family:sans-serif; font-size:15px; color:blue;">단측 검정 결과  ', f' ▷ {direction}</p>', unsafe_allow_html=True) 
     st.write(one_s_test)
 
-st.write("""업로드할 파일은 첫 행이 컬럼명이어야 하고, 컬럼 구성은 다음과 같이 부탁드릴게요:)  
+st.write("""**업로드할 파일은 첫 행이 컬럼명이어야 하고, 컬럼 구성은 다음과 같이 부탁드릴게요:**)  
          - 날짜 : 소재 노출일자  
          - 소재명 : 각 소재의 이름  
          - 소재 구분 : 시안1(대조군)과 시안2(실험군) 구분값을 넣은 컬럼이에요. 0과 1로 구분해주세요.  

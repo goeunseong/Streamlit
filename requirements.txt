@@ -1,8 +1,6 @@
+numpy 
+pandas 
+matplotlib 
+seaborn 
+plotly 
 streamlit
-numpy
-pandas
-seaborn
-matplotlib
-scipy
-time
-sklearn

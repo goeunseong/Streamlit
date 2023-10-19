@@ -1,10 +1,10 @@
 ### 프로젝트명 : A/B Test를 위한 마이크로 페이지 개발  
 
-1. 프로젝트 기간
-2023.05.03 ~ 05.14
+1. Project Name: Development of Micro Pages for A/B Testing
+2. Project Duration: May 3, 2023, to May 14, 2023
 
-2. 개발 환경
-사용 언어 : Python
-활용 기술 : Streamlit(웹앱 개발), T-test, 정규성 검정, 데이터 시각화
+3. Development Environment:
+   - Language: Python
+   - Technologies Used: Streamlit (Web App Development), T-test, Normality Testing, Data Visualization
 
 
